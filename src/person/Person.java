@@ -6,6 +6,7 @@ public class Person {
     private String name;
     private String surName;
     private Pet pet;
+    private int age;
 
     public Person() {
     }
@@ -44,5 +45,14 @@ public class Person {
     public void callYourPet() {
         System.out.println("Say something!");
         pet.say();
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        System.out.println("Set age: " + age);
+        this.age = age;
     }
 }

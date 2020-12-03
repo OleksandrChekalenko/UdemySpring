@@ -13,6 +13,7 @@ public class ApplicationTest3 {
 //        Person person = new Person(pet);
         Person person = context.getBean("myPerson", Person.class);
         person.callYourPet();
+        System.out.println(person.getAge());
         context.close();
     }
 }

@@ -35,7 +35,9 @@ public class Person {
         return pet;
     }
 
+    //pet -> SetPet (Spring Bean)
     public void setPet(Pet pet) {
+        System.out.println("Class Person: set pet");
         this.pet = pet;
     }
 

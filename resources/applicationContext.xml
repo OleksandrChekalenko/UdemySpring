@@ -5,4 +5,7 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="myPet" class="animals.Dog"/>
+    <bean id="myPerson" class="person.Person">
+        <constructor-arg ref="myPet"/>
+    </bean>
 </beans>

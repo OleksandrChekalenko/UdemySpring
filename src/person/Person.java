@@ -11,6 +11,7 @@ public class Person {
     }
 
     public Person(Pet pet) {
+        System.out.println("Person Bean is created.");
         this.pet = pet;
     }
 
@@ -39,6 +40,7 @@ public class Person {
     }
 
     public void callYourPet() {
+        System.out.println("Say something!");
         pet.say();
     }
 }

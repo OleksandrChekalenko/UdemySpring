@@ -1,11 +1,7 @@
 package main.person;
 
 import main.animals.Pet;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
 
 //@Component("personBean")
 //@Scope("prototype")
@@ -20,7 +16,7 @@ public class Person {
     //@Qualifier("catBean")
     private Pet pet;
 
-//    @Value("${person.age}")
+    @Value("${person.age}")
     private int age;
 
     public Person() {

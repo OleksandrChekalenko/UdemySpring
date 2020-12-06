@@ -1,14 +1,13 @@
 package main.entryPoint;
 
-import main.animals.Pet;
-import main.config.XXConfiguration;
+import main.config.ApplicationContextConfig;
 import main.person.Person;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class ApplicationTest6 {
 
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(XXConfiguration.class);
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ApplicationContextConfig.class);
 /*
         Person person = context.getBean("personBean", Person.class);
         person.callYourPet();*/
@@ -18,6 +17,8 @@ public class ApplicationTest6 {
 
         Person person = context.getBean("personBean", Person.class);
         person.callYourPet();
+        System.out.println(person.getAge());
+
         context.close();
     }
 }

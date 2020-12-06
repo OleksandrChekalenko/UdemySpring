@@ -1,17 +1,31 @@
 package main.person;
 
 import main.animals.Pet;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component("personBean")
 public class Person {
-    private String name;
+
     private String surName;
+
+    @Value("Oleksandr")
+    private String name;
+
+    //@Autowired
+    //@Qualifier("catBean")
     private Pet pet;
+
+    @Value("${person.age}")
     private int age;
 
     public Person() {
     }
 
-    public Person(Pet pet) {
+    @Autowired
+    public Person(@Qualifier("dogBean") Pet pet) {
         System.out.println("Person Bean is created.");
         this.pet = pet;
     }
@@ -37,6 +51,8 @@ public class Person {
     }
 
     //pet -> SetPet (Spring Bean)
+    //    @Autowired
+    //    @Qualifier("catBean")
     public void setPet(Pet pet) {
         System.out.println("Class Person: set pet");
         this.pet = pet;

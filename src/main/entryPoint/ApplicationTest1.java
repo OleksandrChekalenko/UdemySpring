@@ -1,8 +1,8 @@
-package main;
+package main.entryPoint;
 
-import animals.Cat;
-import animals.Dog;
-import animals.Pet;
+import main.animals.Cat;
+import main.animals.Dog;
+import main.animals.Pet;
 
 public class ApplicationTest1 {
 

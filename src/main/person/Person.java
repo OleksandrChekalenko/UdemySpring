@@ -1,6 +1,6 @@
-package person;
+package main.person;
 
-import animals.Pet;
+import main.animals.Pet;
 
 public class Person {
     private String name;

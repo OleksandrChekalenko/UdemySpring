@@ -1,8 +1,7 @@
-package main;
+package main.entryPoint;
 
-import animals.Pet;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import person.Person;
+import main.person.Person;
 
 public class ApplicationTest3 {
 
@@ -10,7 +9,7 @@ public class ApplicationTest3 {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 //        Pet pet = context.getBean("myPet", Pet.class);
 //        Pet pet = new Cat();
-//        Person person = new Person(pet);
+//        Person main.person = new Person(pet);
         Person person = context.getBean("myPerson", Person.class);
         person.callYourPet();
         System.out.println(person.getAge());

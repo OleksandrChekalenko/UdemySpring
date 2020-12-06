@@ -1,4 +1,4 @@
-package animals;
+package main.animals;
 
 public class Dog implements Pet {
 

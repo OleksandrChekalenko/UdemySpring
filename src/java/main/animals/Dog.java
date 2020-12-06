@@ -11,7 +11,6 @@ public class Dog implements Pet {
         System.out.println("Dog Bean is created.");
     }
 
-    @Override
     public void say() {
         System.out.println("Bou - Wou");
     }

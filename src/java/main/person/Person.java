@@ -20,7 +20,7 @@ public class Person {
     //@Qualifier("catBean")
     private Pet pet;
 
-    @Value("${person.age}")
+//    @Value("${person.age}")
     private int age;
 
     public Person() {

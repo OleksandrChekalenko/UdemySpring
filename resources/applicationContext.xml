@@ -7,9 +7,12 @@
 
     <context:property-placeholder location="classpath:app.properties"/>
 
-    <bean id="myPet" class="animals.Dog"/>
+    <bean id="myPet" class="animals.Dog"
+          init-method="init"
+          destroy-method="destroy"
+    />
     <bean id="myPerson" class="person.Person">
-<!--        <constructor-arg ref="myPet"/>-->
+        <!--        <constructor-arg ref="myPet"/>-->
         <property name="pet" ref="myPet"/>
         <property name="age" value="${person.age}"/>
     </bean>

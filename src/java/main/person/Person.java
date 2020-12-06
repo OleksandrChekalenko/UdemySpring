@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component("personBean")
-@Scope("prototype")
+//@Component("personBean")
+//@Scope("prototype")
 public class Person {
 
     private String surName;
@@ -26,8 +26,13 @@ public class Person {
     public Person() {
     }
 
-    @Autowired
+    /*@Autowired
     public Person(@Qualifier("dogBean") Pet pet) {
+        System.out.println("Person Bean is created.");
+        this.pet = pet;
+    }*/
+
+    public Person(Pet pet) {
         System.out.println("Person Bean is created.");
         this.pet = pet;
     }

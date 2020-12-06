@@ -3,7 +3,7 @@ package main.animals;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component("dogBean")
+//@Component("dogBean")
 @Scope("singleton") //singltone default
 public class Dog implements Pet {
 
